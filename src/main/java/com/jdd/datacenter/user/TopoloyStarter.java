@@ -31,9 +31,9 @@ import backtype.storm.utils.Utils;
  */
 public class TopoloyStarter {
 	public static final Logger LOGGER = LoggerFactory.getLogger(TopoloyStarter.class);
-	public static final String REDIS_HOST = "10.33.97.246";
-	public static final String REDIS_PORT = "19000";
-	public static final String WEBSERVER = "http://10.33.96.28:3000/news";
+	public static final String REDIS_HOST = "10.33.10.246";
+	public static final String REDIS_PORT = "10000";
+	public static final String WEBSERVER = "http://10.33.10.28:3000/news";
 	public static final long DOWNLOAD_TIME = 100;
 	public static boolean testing = false;
 	public static Map config = new HashMap();
