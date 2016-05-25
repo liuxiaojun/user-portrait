@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="30 seconds">
+	<appender name="A1" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%-4r [%t] %-5p %c - %m%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/jstorm-client.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/jstorm-user-portrait.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-20(%d{HH:mm:ss.SSS}[%thread]) %-5level %logger{80} - %msg%n</pattern>
+		</layout>
+	</appender>
+	
+	<root level="INFO">
+		<appender-ref ref="A1" />
+	</root>
+
+	<root level="DEBUG">
+		<appender-ref ref="File"/>
+	</root> 
+	
+		
+	<!-- <root level="ERROR">
+		<appender-ref ref="A1" />
+	</root>
+
+	<root level="ERROR">
+		<appender-ref ref="File"/>
+	</root> -->
+</configuration>

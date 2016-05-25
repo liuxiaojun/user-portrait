@@ -1,0 +1,13 @@
+storm.cluster.mode: "local"
+#storm.cluster.mode: "distributed"
+spout.parallel: 8
+bolt.parallel: 16
+topology.message.timeout.secs: 300
+topology.workers: 4
+#redis config
+redis-host: 10.33.96.246
+redis-port: 19000
+# other config
+webserver: http://10.33.96.28:3000/news
+testing: false
+download-time: 100
